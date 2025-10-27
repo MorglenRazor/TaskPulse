@@ -1,6 +1,7 @@
 using System.Data.Common;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using TaskPulse.Api.Mapping;
 using TaskPulse.Core.DTOs;
 using TaskPulse.Core.Entities;
 using TaskPulse.Infrastructure;
@@ -9,10 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(ProductProfile));
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options=>
