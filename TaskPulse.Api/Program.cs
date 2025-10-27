@@ -1,3 +1,4 @@
+using System.Data.Common;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using TaskPulse.Core.DTOs;
@@ -18,6 +19,14 @@ builder.Services.AddDbContext<AppDbContext>(options=>
     options.UseNpgsql(connectionString));
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.EnsureCreated();
+    DbInitializer.Seed(db);
+
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
