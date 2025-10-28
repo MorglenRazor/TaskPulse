@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPulse.Infrastructure", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPulse.Tests", "TaskPulse.Tests\TaskPulse.Tests.csproj", "{9A414C83-8539-4C05-92EF-49AA3A36B205}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPulse.Identity", "TaskPulse.Identity\TaskPulse.Identity.csproj", "{58BC2AA4-66D4-4008-8078-4264FBA46B94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{9A414C83-8539-4C05-92EF-49AA3A36B205}.Release|x64.Build.0 = Release|Any CPU
 		{9A414C83-8539-4C05-92EF-49AA3A36B205}.Release|x86.ActiveCfg = Release|Any CPU
 		{9A414C83-8539-4C05-92EF-49AA3A36B205}.Release|x86.Build.0 = Release|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Debug|x64.Build.0 = Debug|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Debug|x86.Build.0 = Debug|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Release|x64.ActiveCfg = Release|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Release|x64.Build.0 = Release|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Release|x86.ActiveCfg = Release|Any CPU
+		{58BC2AA4-66D4-4008-8078-4264FBA46B94}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,14 +11,21 @@ services:
     ports:
       - "5433:5432"
     restart: always
+
+
   api:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     container_name: taskpulse_api
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=taskpulse_db;Username=postgres;Password=postgres"
+      ConnectionStrings__DefaultConnection: "Host=taskpulse_postgres;Port=5432;Database=taskpulse_db;Username=postgres;Password=postgres"
+      
+      JwtSettings__Key: "SuperUltraSecretKey_ReplaceThisToSomethingSecure"
+      JwtSettings__Issuer: "TaskPulse"
+      JwtSettings__Audience: "TaskPulseUsers"
+      JwtSettings__ExpiryMinutes: "60"
     ports:
       - "5000:5000"
     depends_on:

@@ -24,7 +24,16 @@ jobs:
 
     - name: Build
       run: dotnet build --no-restore --configuration Release
+      env:
+        JwtSettings__Key: "CI_Secret_Key_Value"
+        JwtSettings__Issuer: "TaskPulse"
+        JwtSettings__Audience: "TaskPulseUsers"
+        JwtSettings__ExpiryMinutes: "60"
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
-
+      env:
+        JwtSettings__Key: "CI_Secret_Key_Value"
+        JwtSettings__Issuer: "TaskPulse"
+        JwtSettings__Audience: "TaskPulseUsers"
+        JwtSettings__ExpiryMinutes: "60"

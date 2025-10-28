@@ -7,6 +7,7 @@ COPY TaskPulse.sln ./
 COPY TaskPulse.Api/TaskPulse.Api.csproj TaskPulse.Api/
 COPY TaskPulse.Core/TaskPulse.Core.csproj TaskPulse.Core/
 COPY TaskPulse.Infrastructure/TaskPulse.Infrastructure.csproj TaskPulse.Infrastructure/
+COPY TaskPulse.Identity/TaskPulse.Identity.csproj TaskPulse.Identity/
 COPY TaskPulse.Tests/TaskPulse.Tests.csproj TaskPulse.Tests/
 
 RUN dotnet restore TaskPulse.sln
